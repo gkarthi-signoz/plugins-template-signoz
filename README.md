@@ -20,7 +20,8 @@ Click **Add to Cursor** on the plugin page, then click **Open Cursor** in the br
 
 ### 3. Install the MCP server
 
-<img width="695" height="261" alt="Screenshot 2026-05-20 at 4 58 28 PM" src="https://github.com/user-attachments/assets/294b6dd9-da49-41bb-a195-8017e922e77a" />
+<img width="695" height="261" alt="Screenshot 2026-05-20 at 4 59 39 PM" src="https://github.com/user-attachments/assets/97ef9c57-8c8c-4218-b291-ff26ea052fa4" />
+
 
 Cursor will open an **Install MCP Server?** dialog. In the URL field, replace `us` with your region from step 1 (e.g. `us`, `eu`, or `in`), then click **Install**.
 
