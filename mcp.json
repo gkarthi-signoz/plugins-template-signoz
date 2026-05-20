@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "signoz": {
-      "url": "https://mcp.${SIGNOZ_REGION}.signoz.cloud/mcp"
+      "url": "https://mcp.{SIGNOZ_REGION}.signoz.cloud/mcp"
     }
   }
 }

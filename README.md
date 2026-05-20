@@ -14,17 +14,17 @@ Open SigNoz and go to **Settings > Ingestion**. Your region is shown in the endp
 | `ingest.eu.signoz.cloud` | `eu` |
 | `ingest.in.signoz.cloud` | `in` |
 
-### 2. Set the `SIGNOZ_REGION` environment variable
+### 2. Add the plugin to Cursor
 
-Add this to your shell profile (`~/.zshrc` or `~/.bashrc`), then restart your terminal:
+Click **Add to Cursor** on the plugin page, then click **Open Cursor** in the browser prompt.
 
-```bash
-export SIGNOZ_REGION=us   # replace with your region: us | eu | in
-```
+### 3. Install the MCP server
 
-### 3. Authenticate
+Cursor will open an **Install MCP Server?** dialog. In the URL field, replace `{SIGNOZ_REGION}` with your region from step 1 (e.g. `us`, `eu`, or `in`), then click **Install**.
 
-After installing the plugin, open Cursor's MCP panel, select **signoz**, and complete the OAuth flow in your browser. You will be prompted for your SigNoz instance URL and API key.
+### 4. Authenticate
+
+Once the plugin is installed, click **Connect** in Cursor's MCP panel. This opens the authorization flow: enter your SigNoz instance URL and API key when prompted.
 
 Create an API key under **Settings > API Keys** in SigNoz. Only Admin users can create API keys.
 
