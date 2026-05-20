@@ -1,34 +1,56 @@
-# Cursor plugin template
+# SigNoz MCP Plugin
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Connects Cursor to the [SigNoz MCP server](https://github.com/SigNoz/signoz-mcp-server) so you can query metrics, traces, logs, alerts, and dashboards using natural language.
 
-Two starter plugins are included:
+## Setup
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+### 1. Find your region
 
-## Getting started
+Open SigNoz and go to **Settings > Ingestion**. Your region is shown in the endpoint URL:
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
+| Endpoint contains | Region |
+|---|---|
+| `ingest.us.signoz.cloud` | `us` |
+| `ingest.eu.signoz.cloud` | `eu` |
+| `ingest.in.signoz.cloud` | `in` |
 
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
+### 2. Set the `SIGNOZ_REGION` environment variable
 
-To add more plugins, see `docs/add-a-plugin.md`.
+Add this to your shell profile (`~/.zshrc` or `~/.bashrc`), then restart your terminal:
 
-## Single plugin vs multi-plugin
+```bash
+export SIGNOZ_REGION=us   # replace with your region: us | eu | in
+```
 
-This template defaults to **multi-plugin** (multiple plugins in one repo).
+### 3. Authenticate
 
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
+After installing the plugin, open Cursor's MCP panel, select **signoz**, and complete the OAuth flow in your browser. You will be prompted for your SigNoz instance URL and API key.
 
-## Submission checklist
+Create an API key under **Settings > API Keys** in SigNoz. Only Admin users can create API keys.
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+## Self-hosted SigNoz
+
+If you run SigNoz yourself, use this config in `.cursor/mcp.json` instead:
+
+```json
+{
+  "mcpServers": {
+    "signoz": {
+      "command": "/path/to/signoz-mcp-server",
+      "args": [],
+      "env": {
+        "SIGNOZ_URL": "https://your-signoz-instance.com",
+        "SIGNOZ_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+```
+
+## What you can ask
+
+- "Show me all active alerts"
+- "What is the p99 latency for the checkout service in the last hour?"
+- "Search error logs for the payment service"
+- "Create a dashboard with CPU and memory metrics"
+- "List all services with traces from the last 6 hours"
