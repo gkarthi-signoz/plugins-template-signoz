@@ -1,12 +1,12 @@
 {
-  "name": "cursor-plugin-starters",
+  "name": "signoz-mcp",
   "owner": {
-    "name": "Your Org",
-    "email": "plugins@example.com"
+    "name": "SigNoz Team",
+    "email": "support@signoz.io"
   },
   "metadata": {
-    "description": "Starter marketplace template for Cursor plugins",
-    "version": "0.1.0"
+    "description": "Access SigNoz metrics, traces, logs, alerts, and dashboards from Cursor via the SigNoz MCP server.",
+    "version": "0.4.0"
   },
   "plugins": [
     {
