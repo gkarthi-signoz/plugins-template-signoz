@@ -22,9 +22,7 @@ Click **Add to Cursor** on the plugin page, then click **Open Cursor** in the br
 
 ### 3. Install the MCP server
 
-<img width="484" height="257" alt="Screenshot 2026-05-19 at 11 47 07 PM" src="https://github.com/user-attachments/assets/effe0963-055c-4733-8058-4d9468cfc27f" />
-
-Cursor will open an **Install MCP Server?** dialog. In the URL field, replace `{SIGNOZ_REGION}` with your region from step 1 (e.g. `us`, `eu`, or `in`), then click **Install**.
+Cursor will open an **Install MCP Server?** dialog. In the URL field, replace `us` with your region from step 1 (e.g. `us`, `eu`, or `in`), then click **Install**.
 
 ### 4. Authenticate
 
