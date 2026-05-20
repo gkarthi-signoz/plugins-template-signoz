@@ -1,0 +1,13 @@
+{
+  "name": "signoz-mcp",
+  "displayName": "SigNoz MCP",
+  "version": "0.4.0",
+  "description": "Access SigNoz metrics, traces, logs, alerts, and dashboards from Cursor via the SigNoz MCP server.",
+  "author": {
+    "name": "SigNoz Team",
+    "email": "support@signoz.io"
+  },
+  "license": "Apache-2.0",
+  "keywords": ["signoz", "observability", "metrics", "traces", "logs", "dashboards", "alerts", "mcp"],
+  "logo": "assets/logo.svg"
+}

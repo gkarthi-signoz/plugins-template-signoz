@@ -10,14 +10,9 @@
   },
   "plugins": [
     {
-      "name": "starter-simple",
-      "source": "./plugins/starter-simple",
-      "description": "Minimal plugin with rules and skills only"
-    },
-    {
-      "name": "starter-advanced",
-      "source": "./plugins/starter-advanced",
-      "description": "Full-featured plugin with rules, skills, agents, commands, hooks, and MCP"
+      "name": "signoz-mcp",
+      "source": "./plugins/signoz-mcp",
+      "description": "SigNoz MCP server: query metrics, traces, logs, alerts, and dashboards from Cursor"
     }
   ]
 }
