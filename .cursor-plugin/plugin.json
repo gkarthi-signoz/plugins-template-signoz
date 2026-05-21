@@ -1,13 +1,29 @@
 {
   "name": "signoz-mcp",
-  "displayName": "SigNoz MCP",
   "version": "0.1.0",
   "description": "Access SigNoz metrics, traces, logs, alerts, and dashboards from Cursor via the SigNoz MCP server.",
   "author": {
-    "name": "SigNoz Team",
-    "email": "support@signoz.io"
+    "name": "SigNoz"
   },
-  "license": "Apache-2.0",
+  "repository": "https://github.com/SigNoz/signoz-cursor-plugin.git",
   "keywords": ["signoz", "observability", "metrics", "traces", "logs", "dashboards", "alerts", "mcp"],
-  "logo": "assets/logo.svg"
+  "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "SIGNOZ_REGION": {
+        "type": "string",
+        "title": "SigNoz Region",
+        "description": "Select the region for your SigNoz Cloud account. Find your region under Settings > Ingestion in SigNoz.",
+        "enum": [
+          "us",
+          "eu",
+          "in"
+        ]
+      }
+    },
+    "required": [
+      "SIGNOZ_REGION"
+    ]
+  }
 }
