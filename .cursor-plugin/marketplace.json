@@ -1,0 +1,18 @@
+  {
+  "name": "signoz-mcp",
+  "owner": {
+    "name": "SigNoz",
+    "email": "goutham@signoz.io"
+  },
+  "metadata": {
+    "description": "MCP Server for SigNoz. Access metrics, traces, logs, alerts, and dashboards from Cursor",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "signoz-mcp",
+      "source": "./",
+      "description": "Access SigNoz metrics, traces, logs, alerts, and dashboards from Cursor via the SigNoz MCP server."
+    }
+  ]
+}
