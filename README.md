@@ -2,35 +2,17 @@
 
 Connects Cursor to the [SigNoz MCP server](https://github.com/SigNoz/signoz-mcp-server) so you can query metrics, traces, logs, alerts, and dashboards using natural language.
 
-## Setup
+## What you need
 
-### 1. Find your region
+- A [SigNoz Cloud](https://signoz.io/) account
+- [Cursor](https://cursor.com/) IDE
 
-Open SigNoz and go to **Settings > Ingestion**. Your region is shown in the endpoint URL:
+## Getting started
 
-| Endpoint contains | Region |
-|---|---|
-| `ingest.us.signoz.cloud` | `us` |
-| `ingest.eu.signoz.cloud` | `eu` |
-| `ingest.in.signoz.cloud` | `in` |
-
-### 2. Add the plugin to Cursor
-
-Click **Add to Cursor** on the plugin page, then click **Open Cursor** in the browser prompt.
-
-### 3. Install the MCP server
-
-<img width="695" height="261" alt="Screenshot 2026-05-20 at 4 59 39 PM" src="https://github.com/user-attachments/assets/97ef9c57-8c8c-4218-b291-ff26ea052fa4" />
-
-
-Cursor will open an **Install MCP Server?** dialog. In the URL field, replace `us` with your region from step 1 (e.g. `us`, `eu`, or `in`), then click **Install**.
-
-### 4. Authenticate
-
-<img width="484" height="92" alt="Screenshot 2026-05-19 at 11 48 35 PM" src="https://github.com/user-attachments/assets/b22aa0a5-2617-4843-997f-82f97497ffe4" />
-
-
-Once the plugin is installed, click **Connect** in Cursor's MCP panel. This opens the authorization flow: enter your SigNoz instance URL and API key when prompted.
+1. Open Cursor Settings and go to the **Plugins** section.
+2. Install the **signoz-mcp** plugin.
+3. When prompted, select your region from the **SigNoz Region** dropdown (`us`, `eu`, or `in`). Not sure which region? Go to **Settings > Ingestion** in SigNoz — the region is in your endpoint URL (e.g. `ingest.us.signoz.cloud` → `us`).
+4. Authenticate the SigNoz MCP server when prompted. Enter your SigNoz instance URL and API key.
 
 Create an API key under **Settings > API Keys** in SigNoz. Only Admin users can create API keys.
 
